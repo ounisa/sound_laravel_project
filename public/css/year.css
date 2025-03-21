@@ -1,0 +1,156 @@
+/* Global Styles */
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.contain2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Year Selection Styles */
+.year-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust alignment */
+  margin: 30px 0;
+  gap: 20px; /* Gap between year items */
+}
+
+.year {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  flex: 1 1 calc(20% - 20px); /* Default to five items per row */
+  max-width: calc(20% - 20px); /* Adjust max-width to match flex */
+}
+
+.year img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.year span {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.year:hover {
+  transform: scale(1.1);
+}
+
+/* Playlist Styles */
+.playlist-container {
+  margin-top: 30px;
+}
+
+.playlist-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.playlist-container li {
+  margin: 10px 0;
+}
+
+/* Player Styles */
+.player-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.player-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+audio {
+  width: 100%;
+  max-width: 600px;
+}
+
+#player-image {
+  display: block;
+  margin: 20px auto;
+}
+
+/* yearPage button css */
+.track__all {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.prime-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #800080; 
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50px;  /* Rounded button */
+  transition: all 0.3s ease;
+  text-align: center;
+  color: white; 
+
+  white-space: nowrap; /* Prevent text from breaking into new lines */
+}
+
+.prime-btn:hover {
+  background-color: #470947; 
+  color: white;
+  border-color: #7b1574; /* Border change on hover */
+  box-shadow: 0 0 15px rgba(224, 31, 235, 0.6); /* Purple shadow */
+}
+.border-btn {
+  border-radius: 50px;
+  color: white;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .year-container .year {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row */
+    max-width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 800px) {
+  .year-container .year {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .year-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .year-container .year {
+    flex: none;
+    width: 100%; /* Full width for each item */
+  }
+
+  .year-container .year span {
+    font-size: 14px;
+  }
+
+  .player-container img {
+    width: 150px;
+    height: 150px;
+  }
+}
